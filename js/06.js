@@ -8,6 +8,7 @@ function inputValidationChecker(event) {
   }
   if (event.target.value.length !== inputLength) {
     validationInputRef.classList.add('invalid');
+    validationInputRef.classList.remove('valid');
   } 
     if (event.target.value.length === 0) {
       validationInputRef.classList.remove('invalid');
@@ -18,7 +19,3 @@ function inputValidationChecker(event) {
 };
 validationInputRef.addEventListener('blur', inputValidationChecker);
 
-addEventListener('keypress', keyPrte)
-function keyPrte(event) {
-  console.log(event);
-}
