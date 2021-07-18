@@ -9,18 +9,29 @@ img {
   width: 100%;
   height: auto;
 }
-.gallery__img {
+/* .gallery__img {
   width: 440px;
-}
-.gallery {
+} */
+#gallery {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
 .gallery__item {
-  flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
+  flex-basis: calc((100% - 30px * 3) / 3);
   margin-left: 30px;
   margin-top: 30px;
   list-style: none;
+}
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }
