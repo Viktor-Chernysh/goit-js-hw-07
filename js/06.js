@@ -13,6 +13,12 @@ function inputValidationChecker(event) {
       validationInputRef.classList.remove('invalid');
       validationInputRef.classList.remove('valid');
   };
-  
+  console.log(event.target.value);
+  console.log(event.currentTarget.value);
 };
-validationInputRef.addEventListener('input', inputValidationChecker);
+validationInputRef.addEventListener('blur', inputValidationChecker);
+
+addEventListener('keypress', keyPrte)
+function keyPrte(event) {
+  console.log(event);
+}
