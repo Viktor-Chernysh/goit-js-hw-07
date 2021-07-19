@@ -18,14 +18,16 @@ const generateBoxes = function (amount) {
   const size = 30;
   amount = Number(inputValueRef.value);
   const boxes = [];
-  for (let i = 0; i < amount; i += 1) {
-    const divEl = document.createElement('div');
-    divEl.style.backgroundColor = createRandomRgb();
-    divEl.style.width = `${size + 10 * i}px`;
-    divEl.style.height = `${size + 10 * i}px`;
-    divEl.style.margin = '5px';
-    boxes.push(divEl);
-  }
+  if (inputValueRef.value <= 100) {
+    for (let i = 0; i < amount; i += 1) {
+      const divEl = document.createElement('div');
+      divEl.style.backgroundColor = createRandomRgb();
+      divEl.style.width = `${size + 10 * i}px`;
+      divEl.style.height = `${size + 10 * i}px`;
+      divEl.style.margin = '5px';
+      boxes.push(divEl);
+    }
+  } else console.log('ERROR!!! VALUE MUST BE LOWER THEN 100!');
   boxesRef.append(...boxes);
 }
 addBoxesRef.addEventListener('click', generateBoxes);
