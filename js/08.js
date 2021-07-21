@@ -1,7 +1,7 @@
 const boxesRef = document.querySelector('#boxes');
 const boxesNumberInput = document.querySelector('#controls');
 const addBoxesRef = boxesNumberInput.querySelector('[data-action="render"]');
-const removeBoxesRef = boxesNumberInput.querySelector('[data-action="destroy"]');
+const removeBoxesButtonRef = boxesNumberInput.querySelector('[data-action="destroy"]');
 const inputValueRef = boxesNumberInput.querySelector('input');
 
 const createRandomRgb = function () {
@@ -12,12 +12,14 @@ const createRandomRgb = function () {
 };
 
 
-const destroyBoxes = removeBoxesRef.addEventListener('click', () => { inputValueRef.value = 0; boxesRef.innerHTML = '<div id="boxes"></div>' });
+const destroyBoxes = removeBoxesButtonRef.addEventListener('click', () => { inputValueRef.value = 0; boxesRef.innerHTML = '<div id="boxes"></div>' });
 
 const generateBoxes = function (amount) {
   const size = 30;
   amount = Number(inputValueRef.value);
+  
   const boxes = [];
+
   if (inputValueRef.value <= inputValueRef.getAttribute('max')) {
     for (let i = 0; i < amount; i += 1) {
       const divEl = document.createElement('div');
