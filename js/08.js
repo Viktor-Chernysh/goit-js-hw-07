@@ -15,6 +15,7 @@ const createRandomRgb = function () {
 const destroyBoxes = removeBoxesButtonRef.addEventListener('click', () => { inputValueRef.value = 0; boxesRef.innerHTML = '<div id="boxes"></div>' });
 
 const generateBoxes = function (amount) {
+  boxesRef.innerHTML ='';
   const size = 30;
   amount = Number(inputValueRef.value);
   
