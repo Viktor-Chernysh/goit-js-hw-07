@@ -20,7 +20,7 @@ const generateBoxes = function (amount) {
   
   const boxes = [];
 
-  if (inputValueRef.value > inputValueRef.getAttribute('max')) {return alert('ERROR!!! VALUE MUST BE LOWER THEN 100!')}
+  if (amount > inputValueRef.getAttribute('max')) {return alert('ERROR!!! VALUE MUST BE LOWER THEN 100!')}
     for (let i = 0; i < amount; i += 1) {
       const divEl = document.createElement('div');
       divEl.style.backgroundColor = createRandomRgb();
