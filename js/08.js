@@ -28,7 +28,7 @@ const generateBoxes = function (amount) {
       divEl.style.height = `${size + 10 * i}px`;
       divEl.style.margin = '5px';
       boxes.push(divEl);
-   
+    }
   boxesRef.append(...boxes);
 }
 addBoxesRef.addEventListener('click', generateBoxes);
